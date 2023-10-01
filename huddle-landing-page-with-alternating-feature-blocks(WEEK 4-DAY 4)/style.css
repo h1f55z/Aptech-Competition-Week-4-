@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&display=swap');
+:root{
+    --Pink: hsl(322, 100%, 66%);
+    --VeryPaleCyan: hsl(193, 100%, 96%);
+    --gray-black:hsl(208, 11%, 55%);
+    --VeryDarkCyan: hsl(192, 100%, 9%);
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+    list-style-type: none;
+    text-decoration: none;
+    line-height: 1.6;
+    font-family: 'Open Sans', sans-serif;
+}
+/* for general styling */
+p{
+    font-size: 15px;
+}
+section{
+    padding: 30px 60px;
+}
+h1{
+    font-family: 'Poppins', sans-serif;
+    color: var(--VeryDarkCyan); 
+}
+.bg-image{
+    background-image: url(./images/bg-hero-desktop.svg);
+    background-color: var(--VeryPaleCyan);
+}
+header nav{
+   display: flex;
+   justify-content: space-between;
+}
+/* My Logos */
+nav .logo img,.logo2 img{
+    width: 150px;
+}
+.hero-sect{
+    display: flex;
+   gap: 50px;
+   padding: 30px 0 0 0;
+}
+.hero-sect article{
+    align-self: center;
+}
+.hero-sect h1{
+    font-size: 35px;
+}
+.hero-sect p{
+    margin: 15px 0 15px 0;
+}
+.get-started-btn{
+    color: white;
+    background-color: var(--Pink);
+    border: none;
+    padding: 10px 40pX;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 25px; 
+    box-shadow: 1px 5px 10px -5px var(--gray-black);
+&:hover{
+    background-color: hsla(322, 100%, 66%, 0.708);
+}
+}
+.get-started-btn.try{
+    background-color: white;
+    color: var(--VeryDarkCyan);
+    &:hover{
+        color:hsl(208, 11%, 55%) ;
+    }
+}
+.call-to-action{
+    padding-top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+.call-to-action article{
+    align-self: center;
+    flex-basis: 400px;
+}
+.call-to-action div{
+    padding: 30px 20px 20px 70px;
+    display: flex;
+    border-radius: 6px;
+    box-shadow: 1px 1px 8px -3px hsl(208, 11%, 55%);
+    justify-content: space-between;
+    background-color: white;
+}
+.call-to-action p{
+    color: var(--gray-black);
+    margin-top: 5px;
+}
+.call-to-action .Ready-to{
+    width: 500px;
+    align-items: center;
+    margin: auto;
+    gap: 10px;
+    padding:  40px;
+    flex-direction: column;
+    position: relative;
+    top:80px;
+}
+footer{
+    background-color: var(--VeryDarkCyan);
+   padding: 100px 60px 50px;
+}
+footer .details{
+    display: flex; 
+    padding: 0;
+    justify-content: space-between;
+    font-weight: 100; 
+    margin:20px 0 ;
+    flex-wrap: wrap;
+}
+footer .details .more-info{
+  flex-basis: 350px;
+}
+footer  *{
+    font-size: small;
+    color: rgba(255, 255, 255, 0.76);
+}
+footer ul li{
+    margin-bottom: 10px;
+}
+.more-info li{
+ display: flex;
+ gap: 10px;
+}
+.more-info li img{
+    align-self: flex-start;
+}
+
+.socials li{
+    border: 1px solid;
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    &:hover,&:hover i{
+        color: var(--Pink);
+    }
+}
+
+.socials p{
+    position: relative;
+    top: 110px;
+}
+
+@media (max-width:915px){
+    .hero-sect img{
+        width: 350px;
+    }
+    .hero-sect h1,h1{
+        font-size: 20px;
+    }
+    p{
+        font-size: 12px;
+    }
+    .hero-sect article{
+       flex-basis: 400px;
+       gap: 5px;
+    }
+    .call-to-action img{
+        width: 215px;
+   }
+    .call-to-action article,footer .details .more-info{
+      flex-basis: 300px;
+    }
+    .socials p{
+        position: relative;
+        top: 0px;
+    }
+  
+}
+@media screen and (max-width:415px) {
+    /* rearranging my sessions */
+   .hero-sect,footer .details,.call-to-action div:nth-child(2),.call-to-action div{
+       flex-direction: column;
+       gap: 10px;
+    }
+    .call-to-action div{
+        flex-direction: column-reverse;
+        padding: 30px;
+        align-items: center;
+    }
+    section,.socials{
+        padding: 15px;
+        text-align: center;
+    }
+    .call-to-action article, .hero-sect article,footer .details .more-info{
+     flex-basis: 0px;
+    }
+    .call-to-action img{
+        width: 300px;
+    }
+   .hero-sect{
+        gap: 20px;
+    }
+    .call-to-action .Ready-to{
+       width: 70%;
+    }
+    .Ready-to h1{
+      font-size: small;
+    }
+    footer{
+       padding: 100px 20px;
+    }
+    .details{
+        text-align: left;
+    } 
+}
